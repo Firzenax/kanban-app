@@ -12,6 +12,7 @@ import { getSession } from "next-auth/react";
 import { data } from "./components/utils/data";
 import AddAndEditBoardModal from "./components/AddAndEditBoardModal";
 import { db } from "./components/utils/firebaseConfig";
+import AddAndEditTaskModal from "./components/AddAndEditTaskModal";
 
 export default function Home() {
   // Manage user details in this state. Key index in TypeScript ensures type safety.
@@ -65,6 +66,7 @@ export default function Home() {
       <BoardTasks />
       <AddAndEditBoardModal />
       <AddAndEditBoardModal />
+      <AddAndEditTaskModal />
     </main>
   );
 }

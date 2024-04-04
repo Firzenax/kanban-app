@@ -3,7 +3,10 @@ import { useFetchDataFromDbQuery } from "@/components/redux/services/apiSlice";
 import { useAppSelector } from "@/components/redux/hooks";
 import { getCurrentBoardName } from "@/components/redux/features/appSlice";
 import { MdDelete, MdEdit } from "react-icons/md";
-import { openAddAndEditBoardModal } from "@/components/redux/features/appSlice";
+import {
+  openAddAndEditBoardModal,
+  openAddAndEditTaskModal,
+} from "@/components/redux/features/appSlice";
 import { useAppDispatch } from "@/components/redux/hooks";
 // Define types for the tasks data
 interface ITask {
@@ -80,7 +83,19 @@ export default function BoardTasks() {
                             >
                               <p>{title}</p>
                               <div className="flex items-center space-x-1">
-                                <MdEdit className="text-lg cursor-pointer" />
+                                <MdEdit
+                                  onClick={() =>
+                                    dispatch(
+                                      openAddAndEditTaskModal({
+                                        variant: "Edit Task",
+                                        title,
+                                        id,
+                                        name,
+                                      })
+                                    )
+                                  }
+                                  className="text-lg cursor-pointer"
+                                />
                                 <MdDelete className="text-lg cursor-pointer text-red-500" />
                               </div>
                             </div>
