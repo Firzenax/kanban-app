@@ -13,6 +13,7 @@ import { data } from "./components/utils/data";
 import AddAndEditBoardModal from "./components/AddAndEditBoardModal";
 import { db } from "./components/utils/firebaseConfig";
 import AddAndEditTaskModal from "./components/AddAndEditTaskModal";
+import DeleteBoardAndTaskModal from "./components/DeleteBoardAndTaskModal";
 
 export default function Home() {
   // Manage user details in this state. Key index in TypeScript ensures type safety.
@@ -67,6 +68,7 @@ export default function Home() {
       <AddAndEditBoardModal />
       <AddAndEditBoardModal />
       <AddAndEditTaskModal />
+      <DeleteBoardAndTaskModal />
     </main>
   );
 }

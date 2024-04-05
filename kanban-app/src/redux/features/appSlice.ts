@@ -85,22 +85,6 @@ export const {
   closeDeleteBoardAndTaskModal,
 } = features.actions;
 
-// delete task and board
-export const getDeleteBoardAndTaskModalValue = (state: RootState) =>
-  state.features.isDeleteBoardAndTaskModal.isOpen;
-// Selector function to retrieve variant state value
-export const getDeleteBoardAndTaskModalVariantValue = (state: RootState) =>
-  state.features.isDeleteBoardAndTaskModal.variant;
-// Selector function to retrieve title state value
-export const getDeleteBoardAndTaskModalStatus = (state: RootState) =>
-  state.features.isDeleteBoardAndTaskModal.status;
-// Selector function to retrieve title state value
-export const getDeleteBoardAndTaskModalIndex = (state: RootState) =>
-  state.features.isDeleteBoardAndTaskModal.index;
-
-export const getDeleteBoardAndTaskModalTitle = (state: RootState) =>
-  state.features.isDeleteBoardAndTaskModal.title;
-
 // add and edit task
 export const getAddAndEditTaskModalValue = (state: RootState) =>
   state.features.isAddAndEditTaskModal.isOpen;
@@ -125,6 +109,20 @@ export const getAddAndEditBoardModalValue = (state: RootState) =>
 // Selector functions to retrieve isOpen value of state from the isAddAndEditBoardModal state
 export const getAddAndEditBoardModalVariantValue = (state: RootState) =>
   state.features.isAddAndEditBoardModal.variant;
-// Selector functions to retrieve isOpen value of state from the isAddAndEditBoardModal state
+
+export const getDeleteBoardAndTaskModalValue = (state: RootState) =>
+  state.features.isDeleteBoardAndTaskModal.isOpen;
+// Selector function to retrieve variant state value
+export const getDeleteBoardAndTaskModalVariantValue = (state: RootState) =>
+  state.features.isDeleteBoardAndTaskModal.variant;
+// Selector function to retrieve title state value
+export const getDeleteBoardAndTaskModalTitle = (state: RootState) =>
+  state.features.isDeleteBoardAndTaskModal.title;
+// Selector function to retrieve status state value
+export const getDeleteBoardAndTaskModalStatus = (state: RootState) =>
+  state.features.isDeleteBoardAndTaskModal.status;
+// Selector function to retrieve index state value
+export const getDeleteBoardAndTaskModalIndex = (state: RootState) =>
+  state.features.isDeleteBoardAndTaskModal.index;
 // Export the reducer for use in the Redux store
 export default features.reducer;

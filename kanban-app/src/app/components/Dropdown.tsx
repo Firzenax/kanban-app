@@ -1,8 +1,6 @@
 import { useAppDispatch } from "@/components/redux/hooks";
-import {
-  openAddAndEditBoardModal,
-  openDeleteBoardAndTaskModal,
-} from "@/components/redux/features/appSlice";
+import { openAddAndEditBoardModal } from "@/components/redux/features/appSlice";
+import { openDeleteBoardAndTaskModal } from "@/components/redux/features/appSlice";
 
 interface IDropdown {
   show: boolean;
